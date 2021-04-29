@@ -1,8 +1,11 @@
 {
   "name": "androidjs-react-app",
+  "app-name": "Android-App",
   "version": "0.1.0",
-  "type": "react-app",
+  "type": "react",
   "private": true,
+  "package-name": "com.google.android",
+  "icon": "./logo.png",
   "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
@@ -11,11 +14,21 @@
     "download:sdk": "grunt shell:gitclone",
     "eject": "react-scripts eject"
   },
+  "theme": {
+    "fullScreen": true
+  },
+  "permission": [
+    "android.permission.INTERNET",
+    "android.webkit.PermissionRequest"
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
+  },
+  "color": {
+    "colorPrimary": "#ff3f51b5"
   },
   "browserslist": {
     "production": [
@@ -43,7 +56,9 @@
     "@types/node": "^12.20.10",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
+    "androidjs": "^2.0.4",
     "androidjs-builder": "^2.2.4",
+    "buffer": "^6.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",

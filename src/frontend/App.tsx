@@ -4,11 +4,18 @@ import './App.css'
 
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
+const front = require('androidjs/lib/front');
 
 function App() {
 
 
   const [url, setUrl] = React.useState<string>('172.16.5.64:3000')
+
+  front.send('Hello', 'Hello Android JS');
+  front.on('print', function(msg: any) {
+    console.log(msg);
+    alert(msg)
+  });
 
   return (
     <div className="App">
